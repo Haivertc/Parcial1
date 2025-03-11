@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes de Star Wars</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Personajes de Star Wars</h1>
+
+    <!-- Filtros -->
+    <div class="filters">
+        <label for="planetFilter">Filtrar por Planeta:</label>
+        <select id="planetFilter">
+            <option value="">Todos</option>
+        </select>
+
+        <label for="speciesFilter">Filtrar por Especie:</label>
+        <select id="speciesFilter">
+            <option value="">Todas</option>
+        </select>
+
+        <button onclick="resetFilters()">Reiniciar</button>
+    </div>
+
+    <!-- Tabla de personajes -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>Color de Ojos</th>
+                <th>Planeta</th>
+                <th>Especie</th>
+            </tr>
+        </thead>
+        <tbody id="characterTable">
+            <% characters.forEach(character => { %>
+                <tr>
+                    <td><%= character.name %></td>
+                    <td><%= character.height %> cm</td>
+                    <td><%= character.mass %> kg</td>
+                    <td><%= character.eye_color %></td>
+                    <td><%= character.homeworld %></td>
+                    <td><%= character.species %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <script src="/scripts.js"></script>
+</body>
+</html>
