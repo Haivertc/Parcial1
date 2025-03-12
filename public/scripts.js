@@ -31,11 +31,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const speciesFilter = document.getElementById("speciesFilter");
     const characterTable = document.getElementById("characterTable");
 
-    // Obtener opciones únicas de planetas y especies
     const planets = [...new Set(characters.map(c => c.homeworld))];
     const species = [...new Set(characters.map(c => c.species))];
 
-    // Llenar los selects de filtros
     planets.forEach(planet => {
         let option = new Option(planet, planet);
         planetFilter.appendChild(option);
@@ -46,7 +44,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         speciesFilter.appendChild(option);
     });
 
-    // Filtrar personajes
     function filterCharacters() {
         const planet = planetFilter.value;
         const specie = speciesFilter.value;
