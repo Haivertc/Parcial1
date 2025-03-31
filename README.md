@@ -3,6 +3,11 @@
 ## Descripción
 Esta es una aplicación web que permite gestionar personajes de Star Wars a partir de un archivo JSON. La aplicación usa **Node.js**, **Express**, y **EJS** como motor de vistas.
 
+##👥 Integrantes
+
+-Haiver Jahir Trujillo Cruz
+-Codigo: 202011549
+
 ## 📌 Requisitos
 Antes de ejecutar la aplicación, asegúrate de tener instalado:
 - [Node.js](https://nodejs.org/)
