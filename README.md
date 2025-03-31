@@ -27,24 +27,21 @@ Antes de ejecutar la aplicación, asegúrate de tener instalado:
 
 El servidor se ejecutará en `http://localhost:3000/`.
 
-## 📁 Estructura del Proyecto
-```
-Parcial1/
-│-- node_modules/
-│-- data/
-│   ├── characters.js  # Módulo con los datos de los personajes
-│   ├── starwar.json  # Archivo con los datos de los personajes
-│-- public/
-│   ├── scripts.js  # Archivo JavaScript para interactividad del cliente
-│-- routes/
-│   ├── characters.js  # Módulo con las rutas de la API
-│-- views/
-│   ├── index.ejs  # Vista principal
-│   ├── styles.css  # Archivo CSS para mejorar el diseño
-│-- server.js  # Servidor principal con Express
-│-- package.json  # Configuración del proyecto
-│-- README.md  # Documentación
-```
+📂 Taller_API/
+├── 📂 middleware/       # Middleware de autenticación
+│   ├── auth.js          # Validación de JWT
+├── 📂 models/           # Modelos de datos
+│   ├── User.js          # Modelo de usuario
+│   ├── Task.js          # Modelo de tarea
+├── 📂 routes/           # Rutas de la API
+│   ├── userRoutes.js    # Endpoints de usuarios
+│   ├── taskRoutes.js    # Endpoints de tareas
+├── 📂 node_modules/     # Dependencias (autogenerado por npm)
+├── server.js           # Servidor principal
+├── swagger.js          # Configuración de Swagger
+├── README.md           # Documentación de la API
+├── .env.example        # Variables de entorno de ejemplo
+├── package.json        # Configuración del proyecto y dependencias
 
 ## 🛠️ Rutas Disponibles
 - `GET /` → Página principal con la tabla de personajes
